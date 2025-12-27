@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Snake Game</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <!-- =========================
+             Game Section (HUD + Board)
+        ========================== -->
+        <section>
+
+            <!-- Game Info Panel -->
+            <div class="infos">
+
+                <!-- High Score -->
+                <div class="info">
+                    <h3>High Score:</h3>
+                    <span id="high-score">0</span>
+                </div>
+
+                <!-- Current Score -->
+                <div class="info">
+                    <h3>Score:</h3>
+                    <span id="score">0</span>
+                </div>
+
+                <!-- Game Timer -->
+                <div class="info">
+                    <h3>Time:</h3>
+                    <span id="time">00:00</span>
+                </div>
+
+            </div>
+
+            <!-- Game Board -->
+            <div class="board"></div>
+
+        </section>
+
+        <!-- =========================
+             Modal Overlay
+        ========================== -->
+        <div class="modal">
+
+            <!-- Start Game Screen -->
+            <div class="start">
+                <h3>Press Enter/Space to start!</h3>
+                <button class="btn btn-start">START GAME</button>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div class="game-over">
+                <h3>
+                    GAME OVER!
+                </h3>
+                <button class="btn btn-restart">RESTART</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Game Script -->
+    <script src="script.js"></script>
+</body>
+</html>
