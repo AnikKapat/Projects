@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         META CONFIGURATION
+    ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+
+    <!-- =========================
+         STYLESHEET
+    ========================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========================
+         MAIN APP WRAPPER
+    ========================== -->
+    <main>
+
+        <!-- =========================
+             NAVBAR
+        ========================== -->
+        <nav>
+            <div class="left">
+                Kanban Board
+            </div>
+
+            <div class="right">
+                <!-- Open modal to add new task -->
+                <button id="toggle-modal">Add New Task</button>
+
+                <!-- Clears all tasks from all columns -->
+                <button id="clear-all">Clear All</button>
+            </div>
+        </nav>
+
+        <!-- =========================
+             KANBAN BOARD
+        ========================== -->
+        <section class="board">
+
+            <!-- ===== TO-DO COLUMN ===== -->
+            <div id="to-do" class="task-column">
+                <div class="heading">
+                    <div class="left">To-Do</div>
+                    <div class="right">Count:</div>
+                </div>
+
+                <!-- Tasks are dynamically injected here -->
+                <!-- <div class="task" draggable="true"></div> -->
+            </div>
+
+            <!-- ===== IN-PROGRESS COLUMN ===== -->
+            <div id="progress" class="task-column">
+                <div class="heading">
+                    <div class="left">In-Progress</div>
+                    <div class="right">Count:</div>
+                </div>
+
+                <!-- Tasks are dynamically injected here -->
+            </div>
+
+            <!-- ===== DONE COLUMN ===== -->
+            <div id="done" class="task-column">
+                <div class="heading">
+                    <div class="left">Done</div>
+                    <div class="right">Count:</div>
+                </div>
+
+                <!-- Tasks are dynamically injected here -->
+            </div>
+
+        </section>
+    </main>
+
+    <!-- =========================
+         ADD NEW TASK MODAL
+    ========================== -->
+    <div class="modal add-new-task">
+
+        <!-- Background overlay (click to close modal) -->
+        <div class="bg"></div>
+
+        <!-- Modal content -->
+        <div class="center">
+            <input
+                type="text"
+                id="task-title"
+                placeholder="Task Title"
+            />
+
+            <textarea
+                id="task-desc"
+                placeholder="Task Description"
+            ></textarea>
+
+            <button id="add-task-btn">Add Task</button>
+        </div>
+    </div>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>
